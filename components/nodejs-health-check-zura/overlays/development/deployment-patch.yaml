@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-zura
+  namespace: e2e-demos-xuqh-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:629d0dc865410c23107490a6ed07b5d06a5d38554c864f35c6978093001a9a03
+        name: my-nodejs
+        resources: {}
+status: {}
